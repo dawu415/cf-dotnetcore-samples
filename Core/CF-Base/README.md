@@ -10,8 +10,13 @@ can be acquired and used by the .NET Core application.
 CF-CommandLineConfiguration.patch is a patch that you can apply to your project:
 
 Step 1: 
+```  
 patch -p1 Program.cs CF-CommandLineConfiguration.patch
+```
 
 Step 2: Either 
   1. Add reference to **Microsoft.Extensions.Configuration.Commandline** via Visual Studio; or
-  2. With dotnet CLI, using the command: **dotnet add package Microsoft.Extensions.Configuration.Commandline**  
+  2. With dotnet CLI, using the command: 
+    ```
+    dotnet add package Microsoft.Extensions.Configuration.Commandline
+    ``` 
