@@ -13,5 +13,5 @@ Step 1:
 patch -p1 Program.cs CF-CommandLineConfiguration.patch
 
 Step 2: Either 
-  1. Add reference to Microsoft.Extensions.Configuration.Commandline via Visual Studio; or
-  2. With CLI, using the command dotnet add package Microsoft.Extensions.Configuration.Commandline  
+  1. Add reference to **Microsoft.Extensions.Configuration.Commandline** via Visual Studio; or
+  2. With dotnet CLI, using the command: **dotnet add package Microsoft.Extensions.Configuration.Commandline**  
