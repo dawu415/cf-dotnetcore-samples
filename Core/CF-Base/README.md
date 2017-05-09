@@ -12,7 +12,6 @@ CF-CommandLineConfiguration.patch is a patch that you can apply to your project:
 Step 1: 
 patch -p1 Program.cs CF-CommandLineConfiguration.patch
 
-Step 2:
-Either 
-  a) Add reference to Microsoft.Extensions.Configuration.Commandline via Visual Studio; or
-  b) With CLI, using the command dotnet add package Microsoft.Extensions.Configuration.Commandline  
+Step 2: Either 
+  1. Add reference to Microsoft.Extensions.Configuration.Commandline via Visual Studio; or
+  2. With CLI, using the command dotnet add package Microsoft.Extensions.Configuration.Commandline  
