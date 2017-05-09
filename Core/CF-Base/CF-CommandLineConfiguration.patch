@@ -1,0 +1,64 @@
+From a056905cef2207a601550a943827305eed70366c Mon Sep 17 00:00:00 2001
+From: David Wu <dawu@pivotal.io>
+Date: Tue, 9 May 2017 16:21:58 -0400
+Subject: [PATCH 2/2] Added support to read in commandline arguments as
+ configuration.
+
+---
+ Core/CF-Base/CF-Base.csproj | 9 +++------
+ Core/CF-Base/Program.cs     | 6 ++++++
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+diff --git a/Core/CF-Base/CF-Base.csproj b/Core/CF-Base/CF-Base.csproj
+index 4b6806f..08b2397 100755
+--- a/Core/CF-Base/CF-Base.csproj
++++ b/Core/CF-Base/CF-Base.csproj
+@@ -1,15 +1,12 @@
+-<Project Sdk="Microsoft.NET.Sdk.Web">
+-
++﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+   <PropertyGroup>
+     <TargetFramework>netcoreapp1.1</TargetFramework>
+   </PropertyGroup>
+-
+   <ItemGroup>
+     <Folder Include="wwwroot\" />
+   </ItemGroup>
+-
+   <ItemGroup>
+     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
++    <PackageReference Include="Microsoft.Extensions.Configuration.Commandline" Version="1.1.2" />
+   </ItemGroup>
+-
+-</Project>
++</Project>
+\ No newline at end of file
+diff --git a/Core/CF-Base/Program.cs b/Core/CF-Base/Program.cs
+index 6fa7d6e..d0b42f3 100755
+--- a/Core/CF-Base/Program.cs
++++ b/Core/CF-Base/Program.cs
+@@ -4,6 +4,7 @@ using System.IO;
+ using System.Linq;
+ using System.Threading.Tasks;
+ using Microsoft.AspNetCore.Hosting;
++using Microsoft.Extensions.Configuration;
+ 
+ namespace CF_Base
+ {
+@@ -11,8 +12,13 @@ namespace CF_Base
+     {
+         public static void Main(string[] args)
+         {
++            var config = new ConfigurationBuilder()
++                .AddCommandLine(args)
++                .Build();
++            
+             var host = new WebHostBuilder()
+                 .UseKestrel()
++                .UseConfiguration(config)
+                 .UseContentRoot(Directory.GetCurrentDirectory())
+                 .UseIISIntegration()
+                 .UseStartup<Startup>()
+-- 
+2.11.1
+
