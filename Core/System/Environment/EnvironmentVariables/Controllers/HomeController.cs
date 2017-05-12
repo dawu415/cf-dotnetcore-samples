@@ -43,12 +43,30 @@ namespace EnvironmentVariables.Controllers
             return _configuration["VCAP_SERVICES"];
         }
 
-        // Do a dump of the VCAP_SERVICES but deserialised as JSON using Newtonsoft JSON.
+        // Output the credentials and info of a known user provided service
         // Hint: Use some an in-browser JSON formatter to see pretty print of the JSON
         // e.g. https://github.com/callumlocke/json-formatter
-        public string VCAP_SERVICES_DESERIALISED_1()
+        public dynamic VCAP_SERVICES_USER_PROVIDED_SERVICE_CREDENTIALS()
         {
-            return "";
+            var upsInfo = _cfEnvVars.getInfoForUserProvidedService("Service2");
+
+            // upsInfo elements can be access like this: 
+            //   upsInfo.credentials.password  or  upsInfo.credentials.username;
+
+            return upsInfo;
+        }
+
+        // Output the credentials and info of a service
+        // Hint: Use some an in-browser JSON formatter to see pretty print of the JSON
+        // e.g. https://github.com/callumlocke/json-formatter
+        public dynamic VCAP_SERVICES_REDIS_SERVICE_CREDENTIALS()
+        {
+            var serviceInfo = _cfEnvVars.getInfoForService("p-redis","myredis_xyz-service");
+
+            // serviceInfo elements can be access like this, e.g., 
+            //  serviceInfo.credentials.password or serviceInfo.credentials.username;
+
+            return serviceInfo;
         }
 
         // **** VCAP_APPLICATION ****
@@ -61,10 +79,18 @@ namespace EnvironmentVariables.Controllers
             return _configuration["VCAP_APPLICATION"];
         }
 
-        // Do a dump of the VCAP_APPLICATION.Limits.
+        // Do an output of the VCAP_APPLICATION.application_name.
         // Hint: Use some an in-browser JSON formatter to see pretty print of the JSON
         // e.g. https://github.com/callumlocke/json-formatter
-        public IDictionary<string, int> VCAP_APPLICATION_LIMITS()
+        public dynamic VCAP_APPLICATION_APP_NAME()
+        {
+            return _cfEnvVars.vcap_application_data.application_name;
+        }
+
+        // Do an output of the VCAP_APPLICATION.Limits.
+        // Hint: Use some an in-browser JSON formatter to see pretty print of the JSON
+        // e.g. https://github.com/callumlocke/json-formatter
+        public dynamic VCAP_APPLICATION_LIMITS()
         {
             return _cfEnvVars.vcap_application_data.limits;
         }
