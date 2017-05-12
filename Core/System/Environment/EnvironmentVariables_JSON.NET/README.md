@@ -3,7 +3,10 @@ This application demonstrates how to access environment variables within an appl
 This utilises a helper class, CFEnvironmentVariables, to cleanly access (or get access to) the environment variables. 
 In addition, it also shows an implementation approach to using dependency injection.
 
-# Getting started for the first time
+# Running this sample application for the first time
+
+For the example to work properly, we'll need to add some dummy services (user provided and marketplace). 
+createService.sh is the script that does this but will require that the app is pushed to CF first.
 
 1. Ensure that p-redis is available in the market place of your CF. If p-redis is not available, you can use something different.
    Modify the createService.sh script and modify the HomeController.cs's method VCAP_SERVICES_REDIS_SERVICE_CREDENTIALS - 
