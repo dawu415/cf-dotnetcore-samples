@@ -1,5 +1,5 @@
 # Cloud Foundry Environment Variables Sample Application
-This application demonstrates how to access environment variables within an application.
+This application demonstrates how to access environment variables within an application using JSON.NET
 This utilises a helper class, CFEnvironmentVariables, to cleanly access (or get access to) the environment variables. 
 In addition, it also shows an implementation approach to using dependency injection.
 
