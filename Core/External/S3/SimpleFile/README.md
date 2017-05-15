@@ -9,7 +9,8 @@ Note that the code here is not production ready code.
 1. An S3 blobstore.  Sign up for the service at http://aws.amazon.com/s3 
 2. A pre-created bucket - Replace <BLOB> in S3FileController with your bucket name.
 3. The Access Key and Secret Access Key - Replace ACCESS_KEY and ACCESS_KEY_SECRET in Startup.cs.  Again this is not secure, so don't do this in production and don't check your keys into a repository!
-4. Ensure you havet the latest .NET Core SDK installed, CF tools, CF account setup and logged in via cf login. Free account at Pivotal Web Services at http://run.pivotal.io/
+4. The Region - Replace RegionEndpoint.USEast1 in Startup.cs with the appropriate one from your account, if needed. 
+5. Ensure you havet the latest .NET Core SDK installed, CF tools, CF account setup and logged in via cf login. Free account at Pivotal Web Services at http://run.pivotal.io/
 
 # Running the example
 
