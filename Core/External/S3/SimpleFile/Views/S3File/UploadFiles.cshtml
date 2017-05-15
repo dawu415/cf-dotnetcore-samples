@@ -1,0 +1,17 @@
+@model SimpleFile.Controllers.S3FileController
+
+@{
+    ViewData["Title"] = "Upload Files";
+}
+
+
+<form asp-action="UploadFiles" 
+      asp-controller="S3File" 
+      method="post"
+      enctype="multipart/form-data">
+    <input type="file" name="files" multiple />
+    <input type="submit" value="Upload Selected Files" />
+    <br>
+       @Html.Raw(ViewBag.Message)
+    </br>
+</form>
