@@ -18,7 +18,7 @@ Note that the code here is not production ready code.
 
 # Some Operations
 
-1. List:  <route>/S3File/list
-2. Download: <route>/S3File/download/<file-in-bucket>
-3. Redirect: <route>/S3File/redirect/<file-in-bucket>
-4. Upload Files: <route>/S3File/UploadFiles
+1. List:  \<route\>/S3File/list
+2. Download: \<route\>/S3File/download/\<file-in-bucket\>
+3. Redirect: \<route\>/S3File/redirect/\<file-in-bucket\>
+4. Upload Files: \<route\>/S3File/UploadFiles
