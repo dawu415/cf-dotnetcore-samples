@@ -1,0 +1,2 @@
+./dotnetgo.sh
+cf push

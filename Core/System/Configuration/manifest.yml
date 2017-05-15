@@ -1,0 +1,11 @@
+﻿---
+
+applications:
+
+- name: Configuration
+  path: pub
+  buildpack: https://github.com/cloudfoundry-community/dotnet-core-buildpack.git
+  env:
+
+    ASPNETCORE_ENVIRONMENT: Development
+    MyCustomEnvironmentVariable: EnvironmentKey
