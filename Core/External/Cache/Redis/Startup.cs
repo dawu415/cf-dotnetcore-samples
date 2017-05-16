@@ -8,6 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using Steeltoe.Extensions.Configuration;
+using Steeltoe.CloudFoundry.Connector.Redis;
+
 namespace Redis
 {
     public class Startup
@@ -18,6 +21,7 @@ namespace Redis
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddCloudFoundry()
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -27,6 +31,9 @@ namespace Redis
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add Microsoft Redis Cache (IDistributedCache) configured from Cloud Foundry
+            services.AddDistributedRedisCache(Configuration);
+
             // Add framework services.
             services.AddMvc();
         }
