@@ -1,0 +1,3 @@
+Configuration:
+  IsProduction: false
+  MyCustomKey:  ConfigServerKey_Development

@@ -1,2 +1,2 @@
 ./dotnetgo.sh
-cf push
+cf push -f manifest.yml
