@@ -24,15 +24,15 @@ namespace blogs_ASPNetCore.Controllers
         }
 
         [HttpPost("addBlog")]
-		public string addBlog(string blogUrl)
-		{
+        public string addBlog(string blogUrl)
+        {
             // Add a new blog Url entry to the database
             _context.Blogs.Add(new Blog() { Url = blogUrl });
             _context.SaveChanges();
 
             return $"{blogUrl} was added";
 
-		}
+        }
 
     }
 }

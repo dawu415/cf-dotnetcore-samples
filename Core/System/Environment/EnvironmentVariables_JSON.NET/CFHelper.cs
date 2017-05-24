@@ -108,24 +108,24 @@ namespace CFHelper
     }
 
     public class BasicMySQLConnectionStringFormatter : IDbConnectionStringFormatter
-	{
+    {
         public string Format(string host, string username, string password, string databaseName, string port = null)
         {
             string connectionString = $"Server={host};Database={databaseName};Uid={username};Pwd={password};";
 
             if (port != null)
                 connectionString += $"Port={port};";
-            
+
 
             return connectionString;
-		}
-	}
+        }
+    }
 
-	public class BasicSQLServerConnectionStringFormatter : IDbConnectionStringFormatter
-	{
-		public string Format(string host, string username, string password, string databaseName, string port = null)
-		{
-			return $"Server={host};Database={databaseName};User ID={username};Password={password};";
-		}
-	}
+    public class BasicSQLServerConnectionStringFormatter : IDbConnectionStringFormatter
+    {
+        public string Format(string host, string username, string password, string databaseName, string port = null)
+        {
+            return $"Server={host};Database={databaseName};User ID={username};Password={password};";
+        }
+    }
 }

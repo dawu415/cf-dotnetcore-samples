@@ -7,7 +7,7 @@ namespace blogs_ASPNetCore.Models
     public static class BloggingExtensions
     {
         public static void EnsureSeedData(this BloggingContext context)
-		{
+        {
             Console.WriteLine("Checking for applied migrations");
             var migrations = context.Database.GetAppliedMigrations();
             foreach (var m in migrations)
@@ -32,8 +32,8 @@ namespace blogs_ASPNetCore.Models
                 {
                     Console.WriteLine("There's Sample Data in the database already");
                 }
-			}
-		}
+            }
+        }
     }
 }
 
