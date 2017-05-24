@@ -1,0 +1,5 @@
+/bin
+/obj
+/pub
+/.vscode
+.DS_Store

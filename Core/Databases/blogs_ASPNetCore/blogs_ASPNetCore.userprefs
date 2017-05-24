@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{58C0AFA3-94C3-4F16-9A31-CBD88137656A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Program.cs" Line="7" Column="1" />
+      <File FileName="Models/BloggingContext.cs" Line="14" Column="31" />
+      <File FileName="Startup.cs" Line="38" Column="73" />
+      <File FileName="Models/Post.cs" Line="2" Column="27" />
+      <File FileName="Models/ExternalLink.cs" Line="2" Column="27" />
+      <File FileName="Models/Blog.cs" Line="8" Column="20" />
+      <File FileName="Models/BloggingExtensions.cs" Line="20" Column="14" />
+      <File FileName="Migrations/BloggingContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="9" Column="4" />
+      <File FileName="Migrations/20170523214159_Initial.cs" Line="18" Column="19" />
+      <File FileName="Helpers/CFHelper.cs" Line="67" Column="21" />
+      <File FileName="Controllers/HomeController.cs" Line="20" Column="42" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.blogs__ASPNetCore PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
