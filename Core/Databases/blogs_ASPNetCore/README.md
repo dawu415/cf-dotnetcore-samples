@@ -17,7 +17,7 @@ Step 3:
 ```
 Operations:
   A. <route>  : Display the contents of the database
-  B. Perform an HTTP post to <route>/Home/addBlog with the paramter 'blogUrl' having the value <urlstring>.
+  B. HTTP post <route>/Home/addBlog with the paramter 'blogUrl' having the value <urlstring>: Add a new blog entry to the database.
 ```
 
 # Important Tips and Notes
